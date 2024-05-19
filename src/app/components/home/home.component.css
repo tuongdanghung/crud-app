@@ -1,0 +1,9 @@
+.card-img-top {
+  width: 100%;
+  height: 280px;
+  border: 1px solid black;
+}
+
+.expired {
+  background-color: red;
+}

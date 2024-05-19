@@ -1,0 +1,14 @@
+<div *ngIf="data">
+  <h2>Thông tin chi tiết trái cây</h2>
+  <p><strong>ID:</strong> {{ data.id }}</p>
+  <p><strong>Tên:</strong> {{ data.name }}</p>
+  <p>
+    <strong>Hình ảnh:</strong>
+    <img [src]="data.image" alt="{{ data.name }}" width="100" />
+  </p>
+  <p><strong>Mô tả:</strong> {{ data.desc }}</p>
+  <p><strong>Số lượng:</strong> {{ data.quantity }}</p>
+  <p><strong>Giá:</strong> {{ data.price }}</p>
+  <p><strong>Ngày sản xuất:</strong> {{ data.nsx }}</p>
+  <p><strong>Hạn sử dụng:</strong> {{ data.hsd }}</p>
+</div>

@@ -1,0 +1,82 @@
+<div class="container">
+  <h2>Tạo mới trái cây</h2>
+  <form (ngSubmit)="onSubmit(fruitForm)" #fruitForm="ngForm">
+    <div class="form-group">
+      <label for="name">Tên trái cây:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="newFruit.name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="image">Link ảnh:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="image"
+        name="image"
+        [(ngModel)]="newFruit.image"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="desc">Mô tả:</label>
+      <textarea
+        class="form-control"
+        id="desc"
+        name="desc"
+        [(ngModel)]="newFruit.desc"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Số lượng:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="quantity"
+        name="quantity"
+        [(ngModel)]="newFruit.quantity"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">Giá:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        name="price"
+        [(ngModel)]="newFruit.price"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="nsx">Ngày sản xuất:</label>
+      <input
+        type="date"
+        class="form-control"
+        id="nsx"
+        name="nsx"
+        [(ngModel)]="newFruit.nsx"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="hsd">Hạn sử dụng:</label>
+      <input
+        type="date"
+        class="form-control"
+        id="hsd"
+        name="hsd"
+        [(ngModel)]="newFruit.hsd"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Tạo mới</button>
+  </form>
+</div>
