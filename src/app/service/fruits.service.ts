@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FruitInterface, CreateFruitInterface } from '../interface/fruits';
 
@@ -13,8 +13,16 @@ export class FruitService {
 
   constructor(private http: HttpClient) {}
 
-  getFruits(): Observable<FruitInterface[]> {
-    return this.http.get<FruitInterface[]>(this.apiUrl);
+  getFruits(page: number, limit: number): Observable<FruitInterface[]> {
+    let params = new HttpParams()
+      .set('page', page.toString())
+      .set('limit', limit.toString());
+    return this.http.get<FruitInterface[]>(this.apiUrl, { params });
+  }
+
+  searchFruits(query: string): Observable<FruitInterface[]> {
+    let params = new HttpParams().set('name', query);
+    return this.http.get<FruitInterface[]>(this.apiUrl, { params });
   }
 
   getDetailFruit(id: number): Observable<FruitInterface> {

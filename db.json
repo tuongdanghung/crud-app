@@ -239,6 +239,16 @@
       "price": 20000,
       "nsx": "2024-04-30",
       "hsd": "2024-05-30"
+    },
+    {
+      "id": "f1c1",
+      "name": "xxx",
+      "image": "https://benhvienk.vn/data/media/1601/images/16100958642348_tao-do-my-red-delicious-size-36-44.jpg",
+      "desc": "xxxx",
+      "quantity": 11,
+      "price": 111,
+      "nsx": "2024-05-01",
+      "hsd": "2024-05-18"
     }
   ]
 }

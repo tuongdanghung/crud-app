@@ -32,4 +32,10 @@
       </div>
     </div>
   </div>
+  <app-pagination-fruit
+    [currentPage]="currentPage"
+    [totalItems]="totalItems"
+    [itemsPerPage]="itemsPerPage"
+    (pageChange)="onPageChange($event)"
+  ></app-pagination-fruit>
 </div>
